@@ -1,0 +1,50 @@
+# 可执行二进制文件
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 测试二进制文件
+*.test
+
+# Go 编译和依赖管理目录
+/bin/           # 本地编译输出目录
+/pkg/           # 本地包目录
+/vendor/         # 项目依赖的副本（若需提交则注释掉）
+
+# Go 模块相关（若使用 Go Modules）
+go.sum          # 注意：通常 go.mod 和 go.sum 应该提交，除非你明确知道后果
+
+# 代码覆盖率输出
+*.out
+*.prof
+
+# 开发环境相关
+.env            # 环境变量文件（常含敏感信息）
+.venv/
+env/
+venv/
+
+# IDE 配置文件（如 JetBrains, VSCode）
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统生成文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 临时文件
+tmp/
+.tmp/
+*.tmp
+
+# 压缩包
+*.zip
+*.tar
+*.gz
