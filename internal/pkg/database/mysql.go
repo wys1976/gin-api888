@@ -4,6 +4,8 @@ package database
 
 import (
 	"database/sql" // 提供通用的 SQL 数据库接口
+	"gin-api888/config"
+
 	// 提供格式化 I/O 功能
 	"log" // 提供简单的日志记录功能
 
@@ -16,7 +18,7 @@ var DB *sql.DB
 
 // InitDB 初始化数据库连接。
 // 此函数使用硬编码的连接参数（根据你的要求设置）。
-func InitDB() {
+func InitDB(*config.Config) {
 	// 构建数据库连接字符串（DSN, Data Source Name）
 	// 格式: "用户名:密码@tcp(主机地址:端口)/数据库名?charset=utf8mb4&parseTime=True&loc=Local"
 	// 使用你的具体参数：用户名 wys, 密码 123456, 数据库名 user_manager

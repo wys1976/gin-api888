@@ -4,8 +4,9 @@ import (
 	"net/http"
 	"strconv"
 
+	"gin-api888/model"
+
 	"github.com/gin-gonic/gin"
-	"github.com/wys1976/gin-api888r/models"
 )
 
 type Response struct {
@@ -27,7 +28,7 @@ func GetUserInfo(c *gin.Context) {
 		return
 	}
 
-	user, err := models.GetUserByID(userID)
+	user, err := model.GetUserByID(userID)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, Response{
 			Code:    500,
@@ -85,7 +86,7 @@ func UpdateUserPhone(c *gin.Context) {
 	//     return
 	// }
 
-	err = models.UpdateUserPhone(userID, request.Phone)
+	err = model.UpdateUserPhone(userID, request.Phone)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, Response{
 			Code:    500,
